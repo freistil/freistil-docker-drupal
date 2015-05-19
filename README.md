@@ -7,9 +7,9 @@ _Docker image template_
 Creating a new build
 --------------------
 
-In order to create a new Docker build from this template, clone its repository and change the remote name to "upstream":
+In order to create a new Docker build from this template, clone its repository, leaving the "origin" remote blank:
 
-    git remote rename origin upstream
+    git clone -o upstream <URL>
 
 Create a new repository for your project and add it as your "origin" remote:
 
