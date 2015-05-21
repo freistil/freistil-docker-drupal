@@ -25,9 +25,12 @@ ENV DRUPAL_ACCOUNT_NAME="admin"
 ENV DRUPAL_ACCOUNT_PASS="drupal"
 # Website name
 ENV DRUPAL_SITE_NAME="Docker"
-# Use a volume for the Drupal installation
-RUN rm -rf $DRUPAL_PARENT_DIR/$DRUPAL_DIR
-VOLUME /var/www/html
+# Install Drupal
+WORKDIR /var/www
+RUN rm -r $DRUPAL_DIR
+RUN drush dl -y --default-major=$DRUPAL_MAJOR_VERSION --drupal-project-rename=$DRUPAL_DIR
+RUN chown -R www-data:www-data $DRUPAL_DIR
+
 
 #
 # MySQL
