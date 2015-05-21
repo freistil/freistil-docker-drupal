@@ -1,31 +1,13 @@
-freistil-docker-template
-========================
+freistil-docker-drupal
+======================
 
-_Docker image template_
-
-
-Creating a new build
---------------------
-
-In order to create a new Docker build from this template, clone its repository, leaving the "origin" remote blank:
-
-    git clone -o upstream <URL>
-
-Create a new repository for your project and add it as your "origin" remote:
-
-    git remote add origin <URL>
-
-Remove this section from the README, commit and push:
-
-    git push -u origin
-
-__Happy dockerising!__
+_Docker image for Drupal development_
 
 
 Building the Docker image
 -------------------------
 
-To create the image `freistil/template`, execute the following command on the freistil-docker-template folder:
+To create the image `freistil/drupal`, execute the following command on the freistil-docker-template folder:
 
 	make build
 
